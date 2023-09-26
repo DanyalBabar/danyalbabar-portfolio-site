@@ -5,7 +5,7 @@ export default function Button(props) {
   return (
     <button
       disabled={props.disabled}
-      className={"db_button" + " " + props.className}
+      className={"db_button " + props.className}
       onClick={props.onClick}
       style={props.style}
     >

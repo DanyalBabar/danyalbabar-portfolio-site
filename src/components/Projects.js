@@ -1,10 +1,6 @@
 import React from "react";
 import "../index.css";
 import "./styles/projects.css";
-import Button from "./Button";
-import myhousekeeperImg from "../static/myhousekeeper.png";
-import assisstivenoteImg from "../static/assistivenote.png";
-import amazondealsImg from "../static/amazondeals.png";
 
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { useWindowDimensions } from "../utilities/WindowDimensions";
@@ -102,9 +98,10 @@ export default function Projects() {
                   Featured Project
                 </span>
                 <a
+                  className="title proj_title"
                   href={project.extLink}
                   target="_blank"
-                  className="title proj_title"
+                  rel="noreferrer"
                 >
                   {project.title}
                 </a>
@@ -116,19 +113,20 @@ export default function Projects() {
                 })}
               </div>
               <div className="links">
-                <a href={project.gitLink} target="_blank">
+                <a href={project.gitLink} target="_blank" rel="noreferrer">
                   <FiGithub size={17} />
                 </a>
-                <a href={project.extLink} target="_blank">
+                <a href={project.extLink} target="_blank" rel="noreferrer">
                   <FiExternalLink size={17} />
                 </a>
               </div>
             </div>
-            <a href={project.extLink} target="_blank">
+            <a href={project.extLink} target="_blank" rel="noreferrer">
               <div className="proj_img_container">
                 <img
                   className="proj_img"
                   src={require(`../static/${project.imgSrc}`)}
+                  alt="project"
                 />
               </div>
             </a>

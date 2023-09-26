@@ -22,17 +22,29 @@ export default function Contact() {
       </div>
 
       <div className="socials">
-        <a href="https://www.linkedin.com/in/danyalbabar/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/danyalbabar/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaLinkedinIn size={20} />
         </a>
-        <a href="https://github.com/DanyalBabar/" target="_blank">
+        <a
+          href="https://github.com/DanyalBabar/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FiGithub size={20} />
         </a>
-        <a href="mailto:danyalbabarcs@gmail.com" target="_blank">
+        <a
+          href="mailto:danyalbabarcs@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           <RiMailLine size={20} />
         </a>
       </div>
-      <a href="mailto:danyalbabarcs@gmail.com" target="_blank">
+      <a href="mailto:danyalbabarcs@gmail.com" target="_blank" rel="noreferrer">
         <Button className="title_button">Say Hello</Button>
       </a>
     </div>

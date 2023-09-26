@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import "./index.css";
 import Preloader from "./components/Preloader";
@@ -10,7 +10,6 @@ import Projects from "./components/Projects";
 import { useWindowDimensions } from "./utilities/WindowDimensions.js";
 
 function App() {
-  const [isVisible, setIsVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const { width } = useWindowDimensions();
 
@@ -54,7 +53,7 @@ function App() {
         const rect = element.getBoundingClientRect();
 
         // Adjust this value to control when the animation triggers
-        const triggerPoint = window.innerHeight * 0.95;
+        const triggerPoint = window.innerHeight;
 
         if (
           rect.top <= triggerPoint &&
@@ -72,7 +71,7 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isVisible]);
+  }, []);
 
   return (
     <>

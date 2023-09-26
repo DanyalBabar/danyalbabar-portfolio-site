@@ -86,7 +86,12 @@ export default function Navbar() {
             transitionDelay: "0s",
           }}
         >
-          <img onClick={onClickHander} className="icon " src={db_logo} />
+          <img
+            onClick={onClickHander}
+            className="icon "
+            src={db_logo}
+            alt="logo"
+          />
         </a>
         <div className="items">
           {collapseNav === false ? (
