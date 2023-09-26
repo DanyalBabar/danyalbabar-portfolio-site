@@ -1,0 +1,109 @@
+@import "../../index.css";
+
+.preloader {
+  /* min-height: 100vh; */
+  height: 100%;
+  width: 100%;
+  background: #060606;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 55;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  overflow: hidden;
+}
+
+.preloaderHidden {
+  height: 100vh;
+  width: 100%;
+  background: #060606;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 55;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  translate: 0% -100%;
+  opacity: 0%;
+  transition-property: translate, opacity;
+  transition-duration: 0.7s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.p {
+  font-weight: 400;
+  margin-top: -90px;
+  text-align: center;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  /* border: green 2px solid; */
+}
+
+.pHidden {
+  font-weight: 400;
+  opacity: 0;
+  margin-top: -90px;
+  text-align: center;
+
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+}
+
+svg {
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+}
+
+svg > g {
+  transform: translate(29%, 29%);
+}
+
+.idle {
+  fill: none;
+  stroke: #04d9ff;
+  stroke-width: 1.75px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+.animating {
+  fill: none;
+  stroke: #04d9ff;
+  stroke-width: 1.75px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 0;
+  transition-property: stroke-dashoffset;
+  transition-duration: 3.5s;
+  transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.closing {
+  fill: none;
+  stroke: #04d9ff;
+  stroke-width: 1.5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 0;
+  transition-property: stroke-dashoffset;
+  flex-direction: column;
+  scale: 0;
+  opacity: 0%;
+  transition-property: scale, translate, opacity;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.19, 0.91, 0.57, 1.02);
+}

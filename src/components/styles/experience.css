@@ -1,0 +1,114 @@
+.experience {
+  display: flex;
+  width: 100%;
+  /* height: 50vh; */
+  padding-top: 15vh;
+  padding-bottom: 25vh;
+  @media (max-width: 768px) {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+  }
+  flex-direction: column;
+  align-items: center;
+  .heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .line {
+    width: 100%;
+    margin: 20px;
+    opacity: 60%;
+  }
+  .title_code {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .heading_text {
+    font-size: 26px;
+    text-wrap: nowrap;
+    font-weight: 700;
+  }
+
+  .title_text {
+    font-size: 4rem;
+    font-size: clamp(2rem, 0.0499rem + 6.667vw, 4rem);
+  }
+
+  .title_button {
+    font-size: 10pt;
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .paragraph {
+    padding-top: 40px;
+    max-width: 650px;
+  }
+
+  .job {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-direction: row;
+    width: 100%;
+
+    padding-bottom: 25px;
+    padding-top: 25px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    font-size: 15px;
+    max-width: 100%;
+    align-items: center;
+
+    .job_desc {
+      display: flex;
+      flex-direction: column;
+      line-height: 125%;
+
+      .company_text {
+        font-size: 15px;
+        text-wrap: nowrap;
+      }
+
+      .position_text {
+        font-size: 15px;
+        /* font-style: italic; */
+      }
+    }
+
+    .separator {
+      @media (max-width: 768px) {
+        width: 75%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      width: max-content;
+      margin-left: 30px;
+      margin-right: 30px;
+      flex-grow: 1;
+      opacity: 60%;
+    }
+
+    .job_details {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      line-height: 125%;
+
+      .date_text {
+        font-weight: 500;
+      }
+      @media (max-width: 768px) {
+        align-items: center;
+      }
+    }
+  }
+}
