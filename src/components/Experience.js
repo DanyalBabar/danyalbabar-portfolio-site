@@ -1,6 +1,6 @@
 import React from "react";
 import "../index.css";
-import "./styles/experience.css";
+import styles from "./styles/experience.module.css";
 import Button from "./Button";
 
 export default function Experience() {
@@ -38,25 +38,35 @@ export default function Experience() {
   ];
 
   return (
-    <div id="experience" className="experience">
-      <div className="heading fade-in">
-        <hr className="line"></hr>
+    <div id="experience" className={styles.experience}>
+      <div className={`${styles.heading} fade-in`}>
+        <hr className={styles.line}></hr>
 
-        <span className="code title_code blue">01.</span>
-        <span className="title heading_text">&nbsp;Where I've Worked</span>
-        <hr className="line"></hr>
+        <span className={`code ${styles.title_code} blue`}>01.</span>
+        <span className={`title ${styles.heading_text}`}>
+          &nbsp;Where I've Worked
+        </span>
+        <hr className={styles.line}></hr>
       </div>
       <div style={{ width: "90%" }} className="fade-in">
         {jobs.map((job) => (
-          <div className="job ">
-            <div className="job_desc">
-              <span className="title company_text blue">{job.company}</span>{" "}
-              <span className="body position_text">{job.position}</span>
+          <div className={styles.job}>
+            <div className={styles.job_desc}>
+              <span className={`title ${styles.company_text} blue`}>
+                {job.company}
+              </span>
+              <span className={`body ${styles.position_text}`}>
+                {job.position}
+              </span>
             </div>
-            <hr className="separator"></hr>
-            <div className="job_details">
-              <span className="code date_text blue">{job.date}</span>
-              <span className="code location_text">{job.location}</span>
+            <hr className={styles.separator}></hr>
+            <div className={styles.job_details}>
+              <span className={`code ${styles.date_text} blue`}>
+                {job.date}
+              </span>
+              <span className={`code ${styles.location_text}`}>
+                {job.location}
+              </span>
             </div>
           </div>
         ))}
@@ -68,7 +78,7 @@ export default function Experience() {
       >
         <Button
           style={{ alignSelf: "center" }}
-          className="title_button fade-in"
+          className={`${styles.title_button} fade-in`}
         >
           Check out my Resume
         </Button>

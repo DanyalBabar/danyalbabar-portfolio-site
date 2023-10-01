@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import db_logo from "../static/db_svg_icon.svg";
-
-import "./styles/navbar.css";
+import "../index.css";
+import styles from "./styles/navbar.module.css";
 import Button from "./Button";
 import { useWindowDimensions } from "../utilities/WindowDimensions.js";
 
@@ -43,7 +43,7 @@ export default function Navbar() {
   };
   return (
     <div
-      className="navbar"
+      className={styles.navbar}
       style={{
         boxShadow: scrolled ? "0 5px 20px -2px #000000c5" : "",
       }}
@@ -53,11 +53,12 @@ export default function Navbar() {
           display: menuOpen ? "block" : "none",
         }}
         onClick={() => setMenuOpen(false)}
-        className="blur_back"
+        className={styles.blur_back}
       ></div>
       <div
         id="sideMenu"
-        className={menuOpen ? "side_menu_open" : "side_menu_closed"}
+        className={menuOpen ? styles.side_menu_open : styles.side_menu_closed}
+        style={{ position: "fixed" }}
       >
         <a onClick={onClickHander} className="code" href="#experience">
           <p className="blue">01.&nbsp;</p> Experience
@@ -78,7 +79,7 @@ export default function Navbar() {
         </a>
       </div>
 
-      <div className="navbar_content">
+      <div className={styles.navbar_content} style={{ width: "100%" }}>
         <a
           href="#top"
           className="fade-in-initial-up"
@@ -88,12 +89,12 @@ export default function Navbar() {
         >
           <img
             onClick={onClickHander}
-            className="icon "
+            className={styles.icon}
             src={db_logo}
             alt="logo"
           />
         </a>
-        <div className="items">
+        <div className={styles.items}>
           {collapseNav === false ? (
             <>
               <a
@@ -145,7 +146,9 @@ export default function Navbar() {
               style={{ zIndex: 1000 }}
               onClick={() => setMenuOpen(!menuOpen)}
             >
-              <div className={menuOpen ? "close_icon " : "menu_icon"} />
+              <div
+                className={menuOpen ? styles.close_icon : styles.menu_icon}
+              />
             </div>
           )}
         </div>

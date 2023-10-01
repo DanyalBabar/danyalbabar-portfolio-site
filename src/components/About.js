@@ -1,6 +1,6 @@
 import React from "react";
 import "../index.css";
-import "./styles/about.css";
+import styles from "./styles/about.module.css";
 import Button from "./Button";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
@@ -8,9 +8,9 @@ import { RiMailLine } from "react-icons/ri";
 
 export default function About() {
   return (
-    <div className="about">
+    <div className={styles.about}>
       <p
-        className="code blue title_code fade-in-initial"
+        className={`code blue ${styles.title_code} fade-in-initial`}
         style={{
           transitionDelay: "1s",
         }}
@@ -18,7 +18,7 @@ export default function About() {
         Hi, my name is
       </p>
       <div
-        className="title title_text fade-in-initial"
+        className={`title ${styles.title_text} fade-in-initial`}
         style={{
           transitionDelay: "1.4s",
         }}
@@ -26,7 +26,7 @@ export default function About() {
         Danyal Babar.
       </div>
       <div
-        className="title title_text offwhite fade-in-initial"
+        className={`title ${styles.title_text} offwhite fade-in-initial`}
         style={{
           transitionDelay: "1.6s",
         }}
@@ -34,7 +34,7 @@ export default function About() {
         I'm a UWaterloo alumni.
       </div>
       <div
-        className="body paragraph fade-in-initial"
+        className={`body ${styles.paragraph} fade-in-initial`}
         style={{
           transitionDelay: "1.8s",
         }}
@@ -42,13 +42,16 @@ export default function About() {
         <span>
           I’m a computer science alumni from the University of Waterloo who is
           passionate about software engineering. Last year, I interned at
-          <span className="blue bold"> Amazon Web Services</span> and{" "}
-          <span className="blue bold">Cisco Meraki</span>. Right now, I’m
-          searching for entry level software engineering roles.
+          <span className={`blue ${styles.bold}`}>
+            {" "}
+            Amazon Web Services
+          </span>{" "}
+          and <span className={`blue ${styles.bold}`}>Cisco Meraki</span>. Right
+          now, I’m searching for entry level software engineering roles.
         </span>
       </div>
       <div
-        className="socials  fade-in-initial"
+        className={`${styles.socials} fade-in-initial`}
         style={{
           transitionDelay: "2s",
         }}
@@ -58,7 +61,7 @@ export default function About() {
           target="_blank"
           rel="noreferrer"
         >
-          <Button className="title_button">Hire me</Button>
+          <Button className={styles.title_button}>Hire me</Button>
         </a>
         <a
           href="https://www.linkedin.com/in/danyalbabar/"
