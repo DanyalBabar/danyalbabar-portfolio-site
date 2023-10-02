@@ -1,6 +1,6 @@
 import React from "react";
 import "../index.css";
-import "./styles/projects.css";
+import styles from "./styles/projects.module.css";
 
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { useWindowDimensions } from "../utilities/WindowDimensions";
@@ -55,24 +55,26 @@ export default function Projects() {
   ];
 
   return (
-    <div id="projects" className="projects">
-      <div className="heading fade-in">
-        <hr className="line"></hr>
+    <div id="projects" className={styles.projects}>
+      <div className={`${styles.heading} fade-in`}>
+        <hr className={styles.line}></hr>
 
-        <span className="code title_code blue">02.</span>
-        <span className="title heading_text">&nbsp;Things I've Built</span>
-        <hr className="line"></hr>
+        <span className={`code ${styles.title_code} blue`}>02.</span>
+        <span className={`title ${styles.heading_text}`}>
+          &nbsp;Things I've Built
+        </span>
+        <hr className={styles.line}></hr>
       </div>
       {projects.map((project, key) => {
         return (
           <div
-            className="proj fade-in"
+            className={`${styles.proj} fade-in`}
             style={{
               flexDirection: key % 2 ? "row-reverse" : "row",
             }}
           >
             <div
-              className="proj_details"
+              className={styles.proj_details}
               style={
                 width <= 1200
                   ? {
@@ -88,17 +90,17 @@ export default function Projects() {
               }
             >
               <div
-                className="proj_header"
+                className={styles.proj_header}
                 style={{
                   alignItems:
                     width >= 1200 && key % 2 ? "flex-end" : "flex-start",
                 }}
               >
-                <span className="code proj_header_intro blue">
+                <span className={`code ${styles.proj_header_intro} blue`}>
                   Featured Project
                 </span>
                 <a
-                  className="title proj_title"
+                  className={`title ${styles.proj_title}`}
                   href={project.extLink}
                   target="_blank"
                   rel="noreferrer"
@@ -106,13 +108,15 @@ export default function Projects() {
                   {project.title}
                 </a>
               </div>
-              <span className="body proj_desc">{project.description}</span>
-              <div className="code offwhite tools">
+              <span className={`body ${styles.proj_desc}`}>
+                {project.description}
+              </span>
+              <div className={`code offwhite ${styles.tools}`}>
                 {project.tools.map((tool) => {
                   return <span>{tool}</span>;
                 })}
               </div>
-              <div className="links">
+              <div className={styles.links}>
                 <a href={project.gitLink} target="_blank" rel="noreferrer">
                   <FiGithub size={17} />
                 </a>
@@ -122,9 +126,9 @@ export default function Projects() {
               </div>
             </div>
             <a href={project.extLink} target="_blank" rel="noreferrer">
-              <div className="proj_img_container">
+              <div className={styles.proj_img_container}>
                 <img
-                  className="proj_img"
+                  className={styles.proj_img}
                   src={require(`../static/${project.imgSrc}`)}
                   alt="project"
                 />

@@ -29,8 +29,8 @@ function App() {
         element.classList.add("fade-in-active");
       });
 
-      elements.forEach((element, index) => {
-        element.classList.add("fade-in-active");
+      elements.forEach((element) => {
+        element.classList.add("fade-in-initial-active");
       });
     }
   }, [isLoading]);

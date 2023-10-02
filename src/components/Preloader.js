@@ -1,25 +1,40 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import classes from "./styles/preloader.module.css";
+const svgClasses = {
+  start: classes.idle,
+  animating: classes.animating,
+  closing: classes.closing,
+};
 
 export default function Preloader() {
-  const [svgStyle, setSvgStyle] = useState(classes.idle);
+  const [svgStyle, setSvgStyle] = useState(svgClasses.animating);
   const [textStyle, setTextStyle] = useState(classes.pHidden);
   const [preloaderStyle, setPreloaderStyle] = useState(classes.preloader);
 
-  const animate = () => {
-    setSvgStyle(classes.animating);
-  };
+  // useEffect(() => {
+  //   setSvgStyle(svgClasses.start);
+  //   console.log("happening", svgStyle);
+  // }, []);
+
+  // useEffect(() => {
+  //   if (svgStyle === svgClasses.start) {
+  //     console.log("animate!");
+  //     setSvgStyle(svgClasses.animating);
+  //   }
+  // }, [svgStyle]);
 
   useEffect(() => {
+    // debugger;
+    // console.log("STARTT");
     document.body.style.overflow = "hidden";
-    setSvgStyle(classes.idle);
+
     const timer2 = setTimeout(() => {
       setTextStyle(classes.p);
     }, 2000);
 
     const timer = setTimeout(() => {
-      setSvgStyle(classes.closing);
+      setSvgStyle(svgClasses.closing);
       setTextStyle(classes.pHidden);
     }, 3500);
 
@@ -28,7 +43,6 @@ export default function Preloader() {
       document.body.style.overflow = "visible";
     }, 3700);
 
-    animate();
     return () => {
       clearTimeout(timer);
       clearTimeout(timer2);

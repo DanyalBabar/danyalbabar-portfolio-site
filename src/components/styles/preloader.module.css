@@ -68,7 +68,7 @@ svg > g {
   transform: translate(29%, 29%);
 }
 
-.idle {
+/* .idle {
   fill: none;
   stroke: #04d9ff;
   stroke-width: 1.75px;
@@ -76,6 +76,8 @@ svg > g {
   stroke-linejoin: round;
   stroke-dasharray: 100;
   stroke-dashoffset: 100;
+  transition-duration: 3.5s;
+  transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
 }
 
 .animating {
@@ -89,6 +91,27 @@ svg > g {
   transition-property: stroke-dashoffset;
   transition-duration: 3.5s;
   transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+} */
+
+@keyframes animateStroke {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animating {
+  fill: none;
+  stroke: #04d9ff;
+  stroke-width: 1.75px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100; /* Start with stroke-dasharray: 0 */
+  stroke-dashoffset: 100;
+  animation-delay: 0.1s;
+  animation: animateStroke 3.5s cubic-bezier(0.83, 0, 0.17, 1) forwards;
 }
 
 .closing {
