@@ -12,7 +12,7 @@ export default function About() {
       <p
         className={`code blue ${styles.title_code} fade-in-initial`}
         style={{
-          transitionDelay: "1s",
+          animationDelay: "1s",
         }}
       >
         Hi, my name is
@@ -20,7 +20,7 @@ export default function About() {
       <div
         className={`title ${styles.title_text} fade-in-initial`}
         style={{
-          transitionDelay: "1.4s",
+          animationDelay: "1.4s",
         }}
       >
         Danyal Babar.
@@ -28,7 +28,7 @@ export default function About() {
       <div
         className={`title ${styles.title_text} offwhite fade-in-initial`}
         style={{
-          transitionDelay: "1.6s",
+          animationDelay: "1.6s",
         }}
       >
         I'm a UWaterloo alumni.
@@ -36,7 +36,7 @@ export default function About() {
       <div
         className={`body ${styles.paragraph} fade-in-initial`}
         style={{
-          transitionDelay: "1.8s",
+          animationDelay: "1.8s",
         }}
       >
         <span>
@@ -53,7 +53,7 @@ export default function About() {
       <div
         className={`${styles.socials} fade-in-initial`}
         style={{
-          transitionDelay: "2s",
+          animationDelay: "2s",
         }}
       >
         <a

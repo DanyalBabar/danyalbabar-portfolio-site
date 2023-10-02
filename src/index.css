@@ -75,17 +75,23 @@ body {
   transform: translateY(0);
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .fade-in-initial {
   opacity: 0;
   transform: translateY(
     20px
   ); /* Optional: You can use different transform properties for different effects */
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.fade-in-initial.fade-in-initial-active {
-  opacity: 1;
-  transform: translateY(0);
+  animation: fadeIn 0.5s ease both;
 }
 
 .fade-in-initial-up {

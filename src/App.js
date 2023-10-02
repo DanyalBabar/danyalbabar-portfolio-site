@@ -22,15 +22,10 @@ function App() {
 
   useEffect(() => {
     if (isLoading === false) {
-      let elements = document.querySelectorAll(".fade-in-initial");
       let navElements = document.querySelectorAll(".fade-in-initial-up");
 
       navElements.forEach((element) => {
         element.classList.add("fade-in-active");
-      });
-
-      elements.forEach((element) => {
-        element.classList.add("fade-in-initial-active");
       });
     }
   }, [isLoading]);

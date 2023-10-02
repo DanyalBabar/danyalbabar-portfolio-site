@@ -30,7 +30,7 @@
 
   .heading_text {
     font-size: 26px;
-    text-wrap: nowrap;
+    white-space: nowrap;
     font-weight: 700;
   }
 
