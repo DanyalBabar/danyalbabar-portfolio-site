@@ -61,13 +61,22 @@ export default function Navbar() {
         style={{ position: "fixed" }}
       >
         <a onClick={onClickHander} className="code" href="#experience">
-          <p className="blue">01.&nbsp;</p> Experience
+          <p className="blue" style={{ marginLeft: "10px" }}>
+            01.&nbsp;
+          </p>{" "}
+          Experience
         </a>
         <a onClick={onClickHander} className="code" href="#projects">
-          <p className="blue">02.&nbsp;</p> Projects
+          <p className="blue" style={{ marginLeft: "10px" }}>
+            02.&nbsp;
+          </p>{" "}
+          Projects
         </a>
         <a onClick={onClickHander} className="code" href="#contact">
-          <p className="blue">03.&nbsp;</p> Contact
+          <p className="blue" style={{ marginLeft: "10px" }}>
+            03.&nbsp;
+          </p>{" "}
+          Contact
         </a>
 
         <a
@@ -82,9 +91,10 @@ export default function Navbar() {
       <div className={styles.navbar_content} style={{ width: "100%" }}>
         <a
           href="#top"
-          className="fade-in-initial-up"
+          className="fade-in-nav"
           style={{
-            transitionDelay: "0s",
+            animationDelay: "0s",
+            zIndex: 1000,
           }}
         >
           <img
@@ -143,7 +153,7 @@ export default function Navbar() {
           ) : (
             <div
               className="fade-in-nav"
-              style={{ zIndex: 1000 }}
+              style={{ zIndex: 1000, height: "45px", width: "45px" }}
               onClick={() => setMenuOpen(!menuOpen)}
             >
               <div

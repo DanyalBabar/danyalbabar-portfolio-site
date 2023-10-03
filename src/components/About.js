@@ -57,11 +57,11 @@ export default function About() {
         }}
       >
         <a
-          href="https://www.linkedin.com/in/danyalbabar/"
+          href="mailto:danyalbabarcs@gmail.com"
           target="_blank"
           rel="noreferrer"
         >
-          <Button className={styles.title_button}>Hire me</Button>
+          <Button className={styles.title_button}>Reach out!</Button>
         </a>
         <a
           href="https://www.linkedin.com/in/danyalbabar/"

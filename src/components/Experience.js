@@ -80,7 +80,7 @@ export default function Experience() {
           style={{ alignSelf: "center" }}
           className={`${styles.title_button} fade-in`}
         >
-          Check out my Resume
+          Check out my Resume!
         </Button>
       </a>
     </div>

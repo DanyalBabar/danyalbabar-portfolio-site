@@ -13,6 +13,17 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const { width } = useWindowDimensions();
 
+  const preloadImage = (url) => {
+    const img = new Image();
+    img.src = url;
+  };
+
+  useEffect(() => {
+    // Preload the menu_icon and close_icon images
+    preloadImage("./static/menu_icon.svg");
+    preloadImage("./static/close_icon.svg");
+  }, []);
+
   useEffect(() => {
     // Simulate preloader animation
     setTimeout(() => {
@@ -51,7 +62,7 @@ function App() {
         const triggerPoint = window.innerHeight;
 
         if (
-          rect.top <= triggerPoint &&
+          rect.top <= triggerPoint * 0.8 &&
           !element.classList.contains("fade-in-active")
         ) {
           element.classList.add("fade-in-active");

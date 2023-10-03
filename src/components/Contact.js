@@ -44,8 +44,12 @@ export default function Contact() {
           <RiMailLine size={20} />
         </a>
       </div>
-      <a href="mailto:danyalbabarcs@gmail.com" target="_blank" rel="noreferrer">
-        <Button className="title_button">Say Hello</Button>
+      <a
+        href="https://www.linkedin.com/in/danyalbabar/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Button className="title_button">Say Hello!</Button>
       </a>
     </div>
   );
