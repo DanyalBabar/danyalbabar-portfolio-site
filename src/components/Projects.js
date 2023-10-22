@@ -20,7 +20,7 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "myHouseKeeper.ca",
+      title: "myHouseKeeper.app",
       description:
         "Housekeeping web app that allows users to invite friends to " +
         "house groups using email signup links. Users can manage expenses" +
@@ -28,7 +28,7 @@ export default function Projects() {
       imgSrc: "myhousekeeper.png",
       tools: ["MongoDB", "Express", "React", "Node", "AWS"],
       gitLink: "https://github.com/DanyalBabar/myHouseKeeper",
-      extLink: "https://myhousekeeper.ca/",
+      extLink: "https://myhousekeeper.app/",
     },
     {
       title: "AssistiveNote",
