@@ -7,6 +7,12 @@ export default function Experience() {
   const jobs = [
     {
       company: "Amazon Web Services",
+      position: "Software Development Engineer",
+      date: "Mar 2024 - Present",
+      location: "Seattle, WA",
+    },
+    {
+      company: "Amazon Web Services",
       position: "Software Development Engineer Intern",
       date: "Sep - Dec 2022",
       location: "Seattle, WA",
@@ -48,7 +54,7 @@ export default function Experience() {
         </span>
         <hr className={styles.line}></hr>
       </div>
-      <div style={{ width: "90%" }} className="fade-in">
+      <div style={{ width: "70%" }} className="fade-in">
         {jobs.map((job) => (
           <div className={styles.job}>
             <div className={styles.job_desc}>
@@ -75,10 +81,11 @@ export default function Experience() {
         href={process.env.PUBLIC_URL + "/Danyal_Babar_Resume.pdf"}
         target="_blank"
         rel="noopener noreferrer"
+        className="fade-in"
       >
         <Button
           style={{ alignSelf: "center" }}
-          className={`${styles.title_button} fade-in`}
+          className={`${styles.title_button}`}
         >
           Check out my Resume!
         </Button>

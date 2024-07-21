@@ -12,21 +12,7 @@ export default function Preloader() {
   const [textStyle, setTextStyle] = useState(classes.pHidden);
   const [preloaderStyle, setPreloaderStyle] = useState(classes.preloader);
 
-  // useEffect(() => {
-  //   setSvgStyle(svgClasses.start);
-  //   console.log("happening", svgStyle);
-  // }, []);
-
-  // useEffect(() => {
-  //   if (svgStyle === svgClasses.start) {
-  //     console.log("animate!");
-  //     setSvgStyle(svgClasses.animating);
-  //   }
-  // }, [svgStyle]);
-
   useEffect(() => {
-    // debugger;
-    // console.log("STARTT");
     document.body.style.overflow = "hidden";
 
     const timer2 = setTimeout(() => {

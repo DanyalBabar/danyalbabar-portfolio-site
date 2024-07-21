@@ -143,6 +143,7 @@
           &:hover {
             color: #04d9ff;
           }
+          transition: 0.25s;
         }
       }
     }

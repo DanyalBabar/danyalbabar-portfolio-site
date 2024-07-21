@@ -47,7 +47,7 @@
 
   .paragraph {
     padding-top: 40px;
-    max-width: 400px;
+    max-width: 450px;
     text-align: center;
   }
 
@@ -63,6 +63,7 @@
       &:hover {
         color: #04d9ff;
       }
+      transition: 0.25s;
     }
   }
 }

@@ -31,7 +31,7 @@ export default function About() {
           animationDelay: "1.6s",
         }}
       >
-        I'm a UWaterloo alumni.
+        I'm a software engineer.
       </div>
       <div
         className={`body ${styles.paragraph} fade-in-initial`}
@@ -41,13 +41,9 @@ export default function About() {
       >
         <span>
           I’m a computer science alumni from the University of Waterloo who is
-          passionate about software engineering. Last year, I interned at
-          <span className={`blue ${styles.bold}`}>
-            {" "}
-            Amazon Web Services
-          </span>{" "}
-          and <span className={`blue ${styles.bold}`}>Cisco Meraki</span>. Right
-          now, I’m searching for entry level software engineering roles.
+          passionate about software engineering. Currently, I'm working as a
+          Software Development Engineer at{" "}
+          <span className={`blue ${styles.bold}`}>Amazon Web Services</span>.
         </span>
       </div>
       <div

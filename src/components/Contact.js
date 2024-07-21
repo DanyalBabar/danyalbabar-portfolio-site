@@ -16,9 +16,9 @@ export default function Contact() {
       </div>
       <span className="title title_text">Get in touch</span>
       <div className="body paragraph">
-        Currently, I'm actively searching for entry-level software engineering
-        roles. I'm interested in companies of all sizes and development in all
-        parts of the stack.
+        Currently, I'm not actively searching for new roles, but my inbox is
+        always open. If you have a question or want to say hi, I'm always
+        willing to respond.
       </div>
 
       <div className="socials">

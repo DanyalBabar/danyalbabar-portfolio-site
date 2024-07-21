@@ -99,11 +99,11 @@
 .icon {
   width: 40px;
   z-index: 100;
+  transition-duration: 0.25s;
 }
 
 .icon:hover {
-  background-color: #04d9ff32;
-  box-shadow: 0 0 10px 3px #04d9ff32;
+  box-shadow: 0 0 10px 3px #41e3ff32;
   cursor: pointer;
   transition-duration: 0.25s;
 }
@@ -113,12 +113,14 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
+  transition-duration: 0.2s;
 }
 
 a:hover {
   color: #04d9ff;
   transition-duration: 0.2s;
   cursor: pointer;
+  transition-duration: 0.2s;
 }
 
 .menu_icon {
